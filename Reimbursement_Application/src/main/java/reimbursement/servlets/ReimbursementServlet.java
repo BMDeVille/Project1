@@ -20,7 +20,7 @@ public class ReimbursementServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	final static Logger logger = Logger.getLogger(ReimbursementDAOImpl.class);
+	final static Logger logger = Logger.getLogger(ReimbursementServlet.class);
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		logger.info("URI = " + req.getRequestURI());

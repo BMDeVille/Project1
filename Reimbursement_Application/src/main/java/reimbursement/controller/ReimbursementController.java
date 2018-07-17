@@ -14,7 +14,7 @@ import reimbursement.service.ReimbursementServiceImpl;
 
 public class ReimbursementController {
 	static ReimbursementService reimb = new ReimbursementServiceImpl();
-	final static Logger logger = Logger.getLogger(ReimbursementDAOImpl.class);
+	final static Logger logger = Logger.getLogger(ReimbursementController.class);
 	
 	public static List<ReimbursementTicket> getAllTickets(HttpServletRequest request){
 		if(!request.getMethod().equals("GET")) {

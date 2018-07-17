@@ -12,7 +12,7 @@ import reimbursement.service.ReimbursementServiceImpl;
 public class LoginController {
 	
 	private static ReimbursementService reimb = new ReimbursementServiceImpl();
-	final static Logger logger = Logger.getLogger(ReimbursementDAOImpl.class);
+	final static Logger logger = Logger.getLogger(LoginController.class);
 	
 	public static String login(HttpServletRequest request) {
 		if(!request.getMethod().equals("POST")) {

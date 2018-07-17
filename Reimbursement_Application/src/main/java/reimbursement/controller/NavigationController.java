@@ -10,7 +10,7 @@ import reimbursement.service.ReimbursementServiceImpl;
 
 public class NavigationController {
 	private static ReimbursementService reimb = new ReimbursementServiceImpl();
-	final static Logger logger = Logger.getLogger(ReimbursementDAOImpl.class);
+	final static Logger logger = Logger.getLogger(NavigationController.class);
 	
 	public static String sendHome(HttpServletRequest request) {
 		if(!request.getMethod().equals("POST")) {
