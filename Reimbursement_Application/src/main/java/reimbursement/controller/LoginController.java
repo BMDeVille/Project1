@@ -16,7 +16,7 @@ public class LoginController {
 	
 	public static String login(HttpServletRequest request) {
 		if(!request.getMethod().equals("POST")) {
-			return "/index.html";
+			return "./index.html";
 		}
 		
 		String username = request.getParameter("username");
@@ -27,26 +27,26 @@ public class LoginController {
 			request.getSession().setAttribute("loggedusername", username);
 			request.getSession().setAttribute("loggedpassword", password);
 			logger.info("User: "+username+" has logged in!");
-			return "/resources/html/employee-home.html";
+			return "./resources/html/employee-home.html";
 		}else if(emp.getStatus() == 2){
 			request.getSession().setAttribute("loggedusername", username);
 			request.getSession().setAttribute("loggedpassword", password);
 			logger.info("User: "+username+" has logged in!");
-			return "/resources/html/admin-home.html";
+			return "./resources/html/admin-home.html";
 		}else {
 			logger.info("Unsuccessful login attempt made.");
-			return "/resources/html/login-failed.html";
+			return "./resources/html/login-failed.html";
 		}
 	}
 	
 	public static String logout(HttpServletRequest request) {
 		if(!request.getMethod().equals("POST")) {
-			return "/index.html";
+			return "./index.html";
 		}
 		String username = (String)request.getSession().getAttribute("loggedusername");
 		logger.info("User: "+username+" has logged out!");
 		request.getSession().invalidate();
-		return "/index.html";
+		return "./index.html";
 	}
 
 }
